@@ -68,7 +68,7 @@ async function selectServer(id) { // opens the server selecting modal
 }
 
 var games = document.getElementById("games");
-var game_list = [8747383826]; // TODO: allow user to add and remove games from website
+var game_list = [10280701867]; // TODO: allow user to add and remove games from website
 for (let i = 0; i < game_list.length; i++) {
 	let game = game_list[i];
 	let game_el = document.createElement("li");
