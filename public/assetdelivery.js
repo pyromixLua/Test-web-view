@@ -5,7 +5,7 @@
 import { TextureLoader } from "./three.js-r137/build/three.module.js";
 import { DDSLoader } from "./three.js-r137/examples/jsm/loaders/DDSLoader.js";
 
-const PROXY = "http://localhost:8081"; // The proxy is used to circumvent CORS restrictions.
+const PROXY = "https://cors-6v5ubs5jn-pyromixluas-projects.vercel.app"; // The proxy is used to circumvent CORS restrictions.
 var ddsLoader = new DDSLoader();
 
 var meshCache = {};
