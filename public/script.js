@@ -32,7 +32,7 @@ async function selectServer(id) { // opens the server selecting modal
 	</div>`;
 	servers.appendChild(spinner);
 	// Get a list of servers from roblox and display them in the modal
-	await fetch(`http://localhost:8081/https://games.roblox.com/v1/games/${id}/servers/Public?limit=10`).then(res => res.json()).then(data => {
+	await fetch(`https://cors-i1qi.vercel.app/https://games.roblox.com/v1/games/${id}/servers/Public?limit=10`).then(res => res.json()).then(data => {
 		servers.innerHTML = "";
 		for (let i = 0; i < data.data.length; i++) {
 			let server = data.data[i];
@@ -72,7 +72,7 @@ var game_list = [10280701867]; // TODO: allow user to add and remove games from 
 for (let i = 0; i < game_list.length; i++) {
 	let game = game_list[i];
 	let game_el = document.createElement("li");
-	fetch(`http://localhost:8081/https://thumbnails.roblox.com/v1/places/gameicons?placeIds=${game}&size=50x50&format=Png&isCircular=false`).then(res => res.json()).then(data => {
+	fetch(`https://cors-i1qi.vercel.app/https://thumbnails.roblox.com/v1/places/gameicons?placeIds=${game}&size=50x50&format=Png&isCircular=false`).then(res => res.json()).then(data => {
 		game_el.innerHTML = `
 		<button data-bs-toggle="modal" data-bs-target="#server-modal" class="dropdown-item" href="#"><img style='border-radius: 2px;' src="${!data["errors"] ? data.data[0].imageUrl : "https://doy2mn9upadnk.cloudfront.net/uploads/default/original/3X/9/7/97a01634662077ed036ebce29757e76e0445b194.png"}" height="24px" width="24px">
 			${game}
