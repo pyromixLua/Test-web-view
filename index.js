@@ -34,13 +34,13 @@ app.post("/frames", (req, res) => {
 	res.send("received");
 });
 
-io.on("connection", (socket) => {
-	console.log("connection");
-	socket.on("disconnect", () => {
-		console.log("disconnection");
-		viewing = "none";
-	});
-});
+//io.on("connection", (socket) => {
+//	console.log("connection");
+//	socket.on("disconnect", () => {
+//		console.log("disconnection");
+//		viewing = "none";
+//	});
+//});
 
 http.listen(8080, () => {
 	console.log("Server is running on port 8080");
