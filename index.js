@@ -4,7 +4,7 @@ var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 app.use(express.static(__dirname + '/public'));
 // increase payload limit
-//app.use(express.json({ limit: '50mb' }));
+app.use(express.json({ limit: '50mb' }));
 
 var viewing = "none";
 
@@ -42,6 +42,6 @@ io.on("connection", (socket) => {
 	});
 });
 
-http.listen(8080, () => {
+app.listen(8080, () => {
 	console.log("Server is running on port 8080");
 });
